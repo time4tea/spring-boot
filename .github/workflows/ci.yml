@@ -16,19 +16,8 @@ jobs:
           - id: ${{ vars.UBUNTU_MEDIUM || 'act-fast' }}
             name: Linux
         java:
-          - version: 17
-            toolchain: true
           - version: 21
             toolchain: true
-          - version: 25
-            toolchain: false
-        exclude:
-          - os:
-              name: Linux
-            java:
-              version: 25
-          - os:
-              name: ${{ github.repository == 'spring-projects/spring-boot-commercial' && 'Windows' }}
     steps:
       - name: Check Out Code
         uses: actions/checkout@v6
