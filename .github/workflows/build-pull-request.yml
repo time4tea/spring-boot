@@ -5,8 +5,7 @@ permissions:
 jobs:
   build:
     name: Build Pull Request
-    if: ${{ github.repository == 'spring-projects/spring-boot' }}
-    runs-on: ${{ vars.UBUNTU_MEDIUM || 'ubuntu-latest' }}
+    runs-on: ${{ vars.UBUNTU_MEDIUM || 'act-fast' }}
     steps:
       - name: Check Out Code
         uses: actions/checkout@v6
