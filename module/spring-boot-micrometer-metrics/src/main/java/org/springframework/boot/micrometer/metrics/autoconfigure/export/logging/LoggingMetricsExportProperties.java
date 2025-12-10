@@ -12,7 +12,6 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- * Copied from another PR just to make something that would trigger a proper build.
  */
 
 package org.springframework.boot.micrometer.metrics.autoconfigure.export.logging;
@@ -35,7 +34,7 @@ public class LoggingMetricsExportProperties extends StepRegistryProperties {
 	/**
 	 * Whether counters and timers that have no activity in an interval are still logged.
 	 */
-	private boolean logInactive = false;
+	private boolean logInactive;
 
 	public boolean isLogInactive() {
 		return this.logInactive;
