@@ -25,7 +25,11 @@ pluginManagement {
 	}
 	evaluate(new File("${rootDir}/SpringRepositorySupport.groovy")).apply(this)
 	repositories {
-		mavenCentral()
-		gradlePluginPortal()
+		maven {
+			url=uri("https://maven-central.cache.act-fast.com/maven2")
+		}
+		maven {
+			url=uri("https://gradle-plugins.cache.act-fast.com/m2")
+		}
 	}
 }
