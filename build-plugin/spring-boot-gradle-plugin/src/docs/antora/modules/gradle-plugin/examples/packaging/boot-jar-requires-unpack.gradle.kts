@@ -6,7 +6,9 @@ plugins {
 }
 
 repositories {
-	mavenCentral()
+	maven {
+		url=uri("https://maven-central.cache.act-fast.com/maven2")
+	}
 }
 
 dependencies {

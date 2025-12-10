@@ -23,9 +23,13 @@ plugins {
 }
 
 repositories {
-	mavenCentral()
+	maven {
+		url=uri("https://maven-central.cache.act-fast.com/maven2")
+	}
 	spring.mavenRepositoriesFor("${springFrameworkVersion}")
-	gradlePluginPortal()
+	maven {
+		url=uri("https://gradle-plugins.cache.act-fast.com/m2")
+	}
 }
 
 java {
